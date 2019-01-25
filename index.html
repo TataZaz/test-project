@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head lang="ru">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <div class="page">
+      <div>
+          <h1 class="title">Запись на прием</h1>
+      </div>
+      <form id="application-form" class="application-form">
+        <div class="form-line">
+            <label class="label" for="doctor-select">Выберете врача</label>
+            <br />
+            <select id="doctor-select" class="select" name="doctor-select">
+              <option disabled>Специальность</option>
+            </select>
+        </div>
+        <div class="form-line">
+            <label class="label" for="name">Ваше ФИО</label>
+            <br />
+            <input id="name" name="name" class="input" />
+        </div>
+        <div class="btn-wrap">
+            <button class="btn" type="submit">Получить талон</button>
+            <button class="btn-secondary" type="reset">Отменить</button>  
+        </div>  
+      </form>
+      <div class="error-message" id="error-message"></div>
+    </div>
+    <div class='talon-page' id="talon-page">
+      <div class="talon-page-inner">
+          <span class="talon-heaing">Ваш талон:</span>
+          <div class="talon-body">
+            <span class="talon-name" id="talon-name"></span>, Вы записаны на прием к
+            <div class="talon-line">
+              <span class="talon-heading">Специальность:</span> <span id="talon-doctor"></span></div>
+            <div class="talon-line">
+                <span class="talon-heading">ФИО:</span> <span class="talon-number" id="talon-doctor-name"></span></div>
+            <div class="talon-line">
+                <span class="talon-heading">№ талона:</span> <span class="talon-number" id="talon-number"></span></div>
+          </div>
+          <div class="btn-wrap">
+              <button type="button" class="btn" id="global-reset">Вернуться к записи</button>
+          </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/script.js"></script>
+</html>
